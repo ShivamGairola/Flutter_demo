@@ -1,0 +1,166 @@
+// all codes goes inside main function
+void main()
+{
+  //calling function
+  print('Hellow World');
+  
+}
+
+// VARIABLES
+void main()
+{
+  String characterName = "Oscar"; // characterName is variable
+  String characterAge = "35"; 
+  print("There was a man named ${characterName}"); //${} represents the value of variable also called String Interpolation 
+  print("Man's age was ${characterAge}");
+  // Order Of execution Matters a lot. For Example
+  
+  characterName = "Dwane"; // characterName is variable
+  characterAge = "64"; 
+  print("There was a man named ${characterName}"); //${} represents the value of variable also called String Interpolation 
+  print("Man's age was ${characterAge}");
+  
+}
+
+// DATA TYPES
+//STRING 
+void main()
+{
+  String firstName = "ronny12411";
+  int age = 34;
+  double cgpa = 8.08;
+  bool isRegisteredVoter = true;
+  print(firstName);
+  print(age);
+  print(cgpa);
+  print( isRegisteredVoter);
+}
+
+// STRING BASICS
+void main()
+{
+  // String concatination
+  String greeting = "Hello";
+  String greeting2 = " World";
+  
+  // Sting functions
+  print(greeting.length);
+  print(greeting[0]);
+  print(greeting.toUpperCase());
+  print(greeting.toLowerCase());
+  print(greeting.indexOf("e"));
+  print(greeting.contains("e"));
+  print('The greeting is ${greeting + greeting2}');
+}
+// INT/DOUBLES
+
+import "dart:math";
+void main()
+{
+ int quantity = 300;
+ double price = 5.99;
+  quantity = quantity+ 50;
+  print(quantity);
+  print(min(1.9));
+}
+
+// Taking Input
+// Taking Input in DART
+import "dart:io";
+void main(){
+print("What's your name?");
+  String username = stdin.readLineSync();// standard input 
+  print("hello ${username}"");
+}
+
+//basic calculator
+// Basic calculator
+import "dart:math";
+import "dart:io"
+
+// void main()
+// {
+//   print("Enter first number");
+//   String num1 = stdin.readLineSync();
+//   print("Enter first number");
+//   String num2 = stdin.readLineSync();
+//   print(int.parse(num1) + int.parse(num2)); // Can also use double instead of int
+// }
+  void main(){
+  print("Enter first number");
+  double num1 = double.parse(stdin.readLineSync());
+  print("Enter first number");
+  double num2 = double.parse(stdin.readLineSync());
+  print(num1+num2); 
+}
+
+// ARRAYS OR LISTS
+void main() {
+  List<int> favNum = [4, 8, 15, 16, 23, 42];
+  //print(favNum);
+  //print(favNum.length);
+  //print(favNum[3]);
+  // Modifying array
+  favNum[3]= 17 ;
+  print(favNum[3]);
+  print(favNum[3] +favNum[4]);
+  // removing an element : this would remove the element
+  //favNums.remove(16);
+  // To get index of any element 
+  print(favNum.indexOf(40));// throws an error because it doesnt exists.
+  
+  // to check whether an element exists or not just use contains
+  print(favNum.contains(40));// this throws boolean value;
+}
+
+
+// FUNCTIONS or METHODS  are collection of codes that can be used multiple times
+ //Function
+
+// declaring the function outside the main function and giving it name as per you 
+void drawTriangle(){
+  print(" /|");
+  print("/_|");
+}
+
+
+void main(){
+  // coneventional method is to copy paste all the code
+  //print("/|");
+ // print("/_|");
+  
+  // Calling a function
+  drawTriangle();
+  drawTriangle();
+  drawTriangle();// calling function 3 times
+  
+ //print("before func");
+  //drawtriangle
+  // print("after func")  this shows the series it executes
+  
+}
+
+// PARAMETERS
+void sayHi(String username, int age)// this is parameter here
+{
+  print("Hi ${username} ,your are ${age} !");
+}
+// calling a function here
+void main()
+{
+  sayHi("Ronny",34);
+  sayHi("Ron",43);
+}
+// RETURN FUNCTION
+
+double addNumbers(double num1,double num2)
+{
+  return num1 + num2;  
+}
+void main()
+{
+ // addNumbers(5,10);
+  //Other way
+  double answer = addNumbers(5,10);
+  print(answer);
+}
